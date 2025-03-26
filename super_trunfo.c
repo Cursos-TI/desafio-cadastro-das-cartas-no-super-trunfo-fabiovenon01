@@ -12,13 +12,13 @@ int main() {
 
         // Cidade 1
         int populacao1, pontosTuristicos1;
-        float area1, pib1;
+        float area1, pib1, densidadePopulacional1, pibPerCapita1; // acrescentado densidadePopulacional1, pibPerCapita1;
         char nome1[30];
         char codigo1[10];
     
         // Cidade 2
         int populacao2, pontosTuristicos2;
-        float area2, pib2;
+        float area2, pib2, densidadePopulacional2, pibPerCapita2; // acrescentado densidadePopulacional2, pibPerCapita2;
         char nome2[30];
         char codigo2[10];
 
@@ -56,6 +56,16 @@ int main() {
     printf("Digite o número de pontos turísticos: ");
     scanf("%d", &pontosTuristicos2);
 
+    // Cálculos para a cidade 1
+    densidadePopulacional1 = populacao1 / area1;  // Densidade populacional
+    pib1 *= 1e9;  // Convertendo PIB para reais (1 bilhão = 1e9)  // metodo visto no youtube e no site https://stackoverflow.com/questions/12134345/1e-9-or-1e9-which-one-is-correct
+    pibPerCapita1 = pib1 / populacao1;  // PIB per capita
+
+    // Cálculos para a cidade 2
+    densidadePopulacional2 = populacao2 / area2;  // Densidade populacional
+    pib2 *= 1e9;  // Convertendo PIB para reais (1 bilhão = 1e9)  // metodo visto no youtube e no site https://stackoverflow.com/questions/12134345/1e-9-or-1e9-which-one-is-correct
+    pibPerCapita2 = pib2 / populacao2;  // PIB per capita      
+
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
@@ -65,18 +75,24 @@ int main() {
     printf("Codigo da Cidade: %s\n", codigo1);
     printf("Nome da Cidade: %s\n", nome1);  // corrigido \n estava errado a barra: /f
     printf("População: %d\n", populacao1);
-    printf("Área: %.2f\n", area1);
-    printf("PIB: %.2f\n", pib1);
-    printf("Número de pontos turísticos: %d\n", pontosTuristicos1);
+    printf("Área: %.2f km\n", area1);  // coloquei km depois de %.2f
+    printf("PIB: %.2f bilhões de reais\n", pib1 / 1e9);  // Mostra o PIB em bilhões, metodo pego no youtube (representa o número 1 seguido por 9 zeros)
+    printf("Número de Pontos Turísticos: %d\n", pontosTuristicos1);
+    printf("Densidade Populacional: %.2f hab/km\n", densidadePopulacional1);
+    printf("PIB per Capita: %.2f de reais\n", pibPerCapita1);
+
+
 
     // dados da cidade 2
     printf("\nDados da cidade 2:\n");
     printf("Codigo da Cidade: %s\n", codigo2);
     printf("Nome da Cidade: %s\n", nome2);  // corrigido \n estava errado a barra: /
     printf("População: %d\n", populacao2);
-    printf("Área: %.2f\n", area2);
-    printf("PIB: %.2f\n", pib2);
-    printf("Número de pontos turísticos: %d\n", pontosTuristicos2);
+    printf("Área: %.2f km\n", area2);  // coloquei km depois de %.2f
+    printf("PIB: %.2f bilhões de reais\n", pib2 / 1e9);  // Mostra o PIB em bilhões , metodo pego no youtube
+    printf("Número de Pontos Turísticos: %d\n", pontosTuristicos2);
+    printf("Densidade Populacional: %.2f hab/km\n", densidadePopulacional2);
+    printf("PIB per Capita: %.2f de reais\n", pibPerCapita2);
 
     
     return 0;
