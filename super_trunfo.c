@@ -58,12 +58,12 @@ int main() {
 
     // Cálculos para a cidade 1
     densidadePopulacional1 = populacao1 / area1;  // Densidade populacional
-    pib1 *= 1e9;  // Convertendo PIB para reais (1 bilhão = 1e9)  // metodo visto no youtube e no site https://stackoverflow.com/questions/12134345/1e-9-or-1e9-which-one-is-correct
+    pib1 *= 1e9;  // Convertendo PIB para reais (1 bilhão = 1e9) representa o número 1 seguido por 9 zeros // metodo visto no youtube e no site https://stackoverflow.com/questions/12134345/1e-9-or-1e9-which-one-is-correct
     pibPerCapita1 = pib1 / populacao1;  // PIB per capita
 
     // Cálculos para a cidade 2
     densidadePopulacional2 = populacao2 / area2;  // Densidade populacional
-    pib2 *= 1e9;  // Convertendo PIB para reais (1 bilhão = 1e9)  // metodo visto no youtube e no site https://stackoverflow.com/questions/12134345/1e-9-or-1e9-which-one-is-correct
+    pib2 *= 1e9;  // Convertendo PIB para reais (1 bilhão = 1e9) representa o número 1 seguido por 9 zeros // metodo visto no youtube e no site https://stackoverflow.com/questions/12134345/1e-9-or-1e9-which-one-is-correct
     pibPerCapita2 = pib2 / populacao2;  // PIB per capita      
 
     // Exibição dos Dados das Cartas:
@@ -81,8 +81,6 @@ int main() {
     printf("Densidade Populacional: %.2f hab/km\n", densidadePopulacional1);
     printf("PIB per Capita: %.2f de reais\n", pibPerCapita1);
 
-
-
     // dados da cidade 2
     printf("\nDados da cidade 2:\n");
     printf("Codigo da Cidade: %s\n", codigo2);
@@ -93,7 +91,6 @@ int main() {
     printf("Número de Pontos Turísticos: %d\n", pontosTuristicos2);
     printf("Densidade Populacional: %.2f hab/km\n", densidadePopulacional2);
     printf("PIB per Capita: %.2f de reais\n", pibPerCapita2);
-
     
     return 0;
 }
