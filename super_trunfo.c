@@ -63,7 +63,7 @@ int main() {
     // dados da cidade 1
     printf("\nDados da cidade 1:\n");
     printf("Codigo da Cidade: %s\n", codigo1);
-    printf("Nome da Cidade: %s/n", nome1);
+    printf("Nome da Cidade: %s\n", nome1);  // corrigido \n estava errado a barra: /f
     printf("População: %d\n", populacao1);
     printf("Área: %.2f\n", area1);
     printf("PIB: %.2f\n", pib1);
@@ -72,7 +72,7 @@ int main() {
     // dados da cidade 2
     printf("\nDados da cidade 2:\n");
     printf("Codigo da Cidade: %s\n", codigo2);
-    printf("Nome da Cidade: %s/n", nome2);
+    printf("Nome da Cidade: %s\n", nome2);  // corrigido \n estava errado a barra: /
     printf("População: %d\n", populacao2);
     printf("Área: %.2f\n", area2);
     printf("PIB: %.2f\n", pib2);
